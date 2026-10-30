@@ -1,0 +1,24 @@
+[project]
+name = "personalize"
+version = "0.1.0"
+description = "Personal memory, feedback gathering, and a monthly review for any LangChain agent."
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+  "langchain>=1.4.7,<2",
+  "langgraph>=1.2.18,<2",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8"]
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["personalize*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
